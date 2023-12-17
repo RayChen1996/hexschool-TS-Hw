@@ -4,6 +4,9 @@ import AboutUs from "../components/Home/about";
 
 import RoomType from "../components/Home/RoomType";
 
+import FoodList from "../components/Home/FoodList";
+import TranpotType from "../components/Home/Transportation";
+
 export default function HomePage() {
   return (
     <div className=" ">
@@ -11,6 +14,10 @@ export default function HomePage() {
       <News />
       <AboutUs />
       <RoomType />
+
+      <FoodList />
+
+      <TranpotType />
     </div>
   );
 }

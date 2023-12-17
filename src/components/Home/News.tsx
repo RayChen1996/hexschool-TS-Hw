@@ -47,7 +47,7 @@ function NewsCardItem() {
   return (
     <div>
       {data.map((item, index) => (
-        <div key={index} className="flex flex-row">
+        <div key={index} className="flex flex-row gap-2 m-5">
           <div>
             <img
               className="w-[474px] h-auto rounded-[8px] bg-cover"
