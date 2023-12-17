@@ -1,4 +1,3 @@
-import React from "react";
 import LineSvg from "../components/svg/Line";
 import IgSvg from "../components/svg/ig";
 

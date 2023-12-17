@@ -1,4 +1,3 @@
-import React from "react";
 import BannerText from "../svg/bannerText";
 export default function Navbar() {
   return (

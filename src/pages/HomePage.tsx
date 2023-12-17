@@ -1,4 +1,3 @@
-import React from "react";
 import Banner from "../components/Home/Banner";
 import News from "../components/Home/News";
 import AboutUs from "../components/Home/about";

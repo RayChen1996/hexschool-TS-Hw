@@ -1,5 +1,3 @@
-import React from "react";
-
 type LineSvgProps = JSX.IntrinsicElements["svg"];
 
 function SvgComponent(props: LineSvgProps) {
@@ -10,6 +8,7 @@ function SvgComponent(props: LineSvgProps) {
       viewBox="0 0 199 78"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M194.246 5.51249C194.227 6.72354 195.182 7.7197 196.368 7.73923C197.553 7.75876 198.528 6.78214 198.547 5.57108C198.566 4.36003 197.61 3.36382 196.425 3.34428C195.221 3.32475 194.246 4.30144 194.246 5.51249Z"

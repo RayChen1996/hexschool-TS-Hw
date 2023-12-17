@@ -1,4 +1,3 @@
-import React from "react";
 import DecoLine from "../svg/DecoLine";
 
 export default function News() {

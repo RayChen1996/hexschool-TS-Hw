@@ -1,5 +1,3 @@
-import React from "react";
-
 type LineSvgProps = JSX.IntrinsicElements["svg"];
 
 function SvgComponent(props: LineSvgProps) {
@@ -10,6 +8,7 @@ function SvgComponent(props: LineSvgProps) {
       viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="white" />
       <g clip-path="url(#clip0_986_2483)">

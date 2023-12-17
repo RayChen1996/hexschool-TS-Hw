@@ -1,4 +1,3 @@
-import React from "react";
 import DecoSvg from "../svg/decoHelf";
 
 export default function About() {

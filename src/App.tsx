@@ -1,5 +1,3 @@
-import { useState } from "react";
-import React, { ReactNode } from "react";
 import "./App.css";
 
 import { MyFooter } from "./components/MyFooter";
@@ -8,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AnotherPage from "./pages/AnotherPage";
 
-function App({ children }: { children: ReactNode }) {
+function App() {
   return (
     <>
       <Router>
@@ -18,7 +16,6 @@ function App({ children }: { children: ReactNode }) {
             <Route path="/another" element={<AnotherPage />} />
             {/* 添加其他页面的Route规则 */}
           </Routes>
-          {children}
 
           <MyFooter />
         </div>
