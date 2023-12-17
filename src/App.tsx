@@ -12,7 +12,7 @@ function App() {
       <Router>
         <div className="h-screen">
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/hexschool-TS-Hw" element={<HomePage />} />
             <Route path="/another" element={<AnotherPage />} />
             {/* 添加其他页面的Route规则 */}
           </Routes>
