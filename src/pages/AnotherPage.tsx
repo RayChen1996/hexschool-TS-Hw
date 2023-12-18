@@ -1,3 +1,3 @@
 export default function AnotherPage() {
-  return <div>AnotherPage</div>;
+  return <div className=" h-screen"></div>;
 }
