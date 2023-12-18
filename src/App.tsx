@@ -8,19 +8,21 @@ import AnotherPage from "./pages/AnotherPage";
 import LoginPage from "./pages/Login";
 import Singup from "./pages/Singup";
 import Singup2 from "./pages/Singup2";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
     <>
-      <Router>
+      <Router basename="/hexschool-TS-Hw">
         <div className="h-screen">
           {/* <Nav /> */}
           <Routes>
-            <Route path="/hexschool-TS-Hw" element={<HomePage />} />
-            <Route path="/hexschool-TS-Hw/another" element={<AnotherPage />} />
-            <Route path="/hexschool-TS-Hw/Login" element={<LoginPage />} />
-            <Route path="/hexschool-TS-Hw/Singup" element={<Singup />} />
-            <Route path="/hexschool-TS-Hw/Singup2" element={<Singup2 />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/another" element={<AnotherPage />} />
+            <Route path="/Login" element={<LoginPage />} />
+            <Route path="/Singup" element={<Singup />} />
+            <Route path="/Singup2" element={<Singup2 />} />
+            <Route path="/Profile" element={<Profile />} />
           </Routes>
           <MyFooter />
         </div>

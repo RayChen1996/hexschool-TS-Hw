@@ -1,6 +1,7 @@
 // import React from "react";
 import Nav from "../components/Navbar";
 import Svg from "../components/svg/login_deco";
+import { Link, useNavigate } from "react-router-dom";
 export default function Singup() {
   return (
     <div className="">
@@ -22,10 +23,20 @@ export default function Singup() {
 }
 
 function FormArea() {
+  const navigate = useNavigate();
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    // 執行提交表單的邏輯，例如 API 請求等
+
+    // 假設提交成功後進行導航
+    // 可以使用 navigate 函數將用戶導向下一個頁面
+    navigate("/Singup2");
+  };
   return (
     <>
       <div className="card relative">
-        <form className="  card-body">
+        <form className="  card-body" onSubmit={handleSubmit}>
           <div className=" absolute right-1 top-1">
             <Svg />
           </div>
@@ -99,23 +110,32 @@ function FormArea() {
 
           <br />
           <div className="card-actions flex-col">
-            <button
+            <Link
+              className="bg-[#ECECEC] border-none text-[#909090] btn btn-primary btn-block  underline "
+              to="/Singup2"
+            >
+              下一步
+            </Link>
+            {/* <button
               type="submit"
               className=" bg-[#ECECEC] border-none text-[#909090] btn btn-primary btn-block"
             >
-              下一步
-            </button>
+              
+            </button> */}
           </div>
 
           <div className="card-actions flex-col">
             <span>
               已經有會員了嗎？
-              <a
+              <Link className=" underline text-[#BF9D7D]" to="/login">
+                立即登入
+              </Link>
+              {/* <a
                 className=" underline text-[#BF9D7D]"
                 href="/hexschool-TS-Hw/login"
               >
                 立即登入
-              </a>
+              </a> */}
             </span>
           </div>
         </form>

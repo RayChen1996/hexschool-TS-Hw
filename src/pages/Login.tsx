@@ -1,6 +1,8 @@
 // import React from "react";
 import Nav from "../components/Navbar";
 import Svg from "../components/svg/login_deco";
+import { Link } from "react-router-dom";
+
 export default function Login() {
   return (
     <div className="">
@@ -78,9 +80,10 @@ function FormArea() {
           <div className="card-actions flex-col">
             <span>
               沒有會員嗎？
-              <a className=" underline text-[#BF9D7D]" href="/">
+              <Link to="/Singup">前往註冊</Link>
+              {/* <a className=" underline text-[#BF9D7D]" href="/">
                 前往註冊
-              </a>
+              </a> */}
             </span>
           </div>
         </form>

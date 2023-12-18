@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export type PageType = "LOGIN" | "REGISTER" | "OTHER";
 export interface NavProps {
   pageType?: PageType;
@@ -122,7 +124,8 @@ export default function Nav() {
                 <a>客房旅宿</a>
               </li>
               <li>
-                <a>會員登入</a>
+                <Link to="/login">會員登入</Link>
+                {/* <a href="/hexschool-TS-Hw/login">會員登入</a> */}
               </li>
 
               <li className=" border-none btn btn-[#BF9D7D] bg-[#BF9D7D] text-white rounded-md">

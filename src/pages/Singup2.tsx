@@ -1,8 +1,7 @@
-// import React from "react";
 import Nav from "../components/Navbar";
 import Svg from "../components/svg/login_deco";
 import CheckSvg from "../components/svg/check";
-
+import { Link } from "react-router-dom";
 export default function Singup2() {
   return (
     <div className="">
@@ -172,12 +171,15 @@ function FormArea() {
           <div className="card-actions flex-col">
             <span>
               已經有會員了嗎？
-              <a
+              <Link className=" underline text-[#BF9D7D]" to="/login">
+                立即登入
+              </Link>
+              {/* <a
                 className=" underline text-[#BF9D7D]"
                 href="/hexschool-TS-Hw/login"
               >
                 立即登入
-              </a>
+              </a> */}
             </span>
           </div>
         </form>
