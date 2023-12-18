@@ -116,20 +116,6 @@ export default function Nav() {
               </svg>
             </a>
           </div>
-          <div className="flex-none">
-            <ul className="menu menu-horizontal px-1">
-              <li>
-                <a>客房旅宿</a>
-              </li>
-              <li>
-                <a>會員登入</a>
-              </li>
-
-              <li className=" border-none btn btn-[#BF9D7D] bg-[#BF9D7D] text-white rounded-md">
-                <a>立即訂房</a>
-              </li>
-            </ul>
-          </div>
 
           <div className="flex-none gap-2">
             <div className="dropdown dropdown-end">
