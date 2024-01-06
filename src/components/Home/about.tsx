@@ -6,17 +6,17 @@ export default function About() {
       <div className=" absolute top-0 left-28">
         <DecoSvg />
       </div>
-      <div className=" rounded-md  flex flex-row h-screen  p-10  bg-cover  bg-[url('/images/home_About.png')]  bg-white gap-8 justify-center items-center mx-auto">
-        <div className=" p-20  rounded-tl-[80px] rounded-tr-[80px] rounded-bl-[80px] rounded-br-[0px]    border-t-0 border-r-0 border-b-[1px] border-l-[1px]     border-solid    border-[#F5F7F9] bg-gradient-to-b from-[#140F0ACC] to-[#BE9C7CCC]  ">
-          <div className=" flex gap-10 flex-col  text-left">
+      <div className=" rounded-md sm:p-10 lg:flex flex-row h-screen  lg:p-10  bg-cover  bg-[url('/images/home_About.png')]  bg-white gap-8 justify-center items-center mx-auto">
+        <div className=" lg:p-20 sm:m-15  sm:p-10 rounded-tl-[80px] rounded-tr-[80px] rounded-bl-[80px] rounded-br-[0px]    border-t-0 border-r-0 border-b-[1px] border-l-[1px]     border-solid    border-[#F5F7F9] bg-gradient-to-b from-[#140F0ACC] to-[#BE9C7CCC]  ">
+          <div className=" flex lg:gap-10 flex-col  text-left">
             <div className=" flex flex-row gap-5">
               <div>
-                <span className=" text-[48px]">關於</span>
+                <span className=" sm:text-[32px] lg:text-[48px]">關於</span>
                 <br />
-                <span className=" text-[48px]">我們</span>
+                <span className="sm:text-[32px] lg:text-[48px]">我們</span>
               </div>
-              <div className="  flex items-center border-y-1 w-[165px]  h-[165px]  ">
-                <div className="  h-[2px] w-[165px] bg-white"></div>
+              <div className=" sm:relative  lg:flex sm:mt-12 items-center border-y-1 w-[165px]  h-[165px]  ">
+                <div className=" sm:absolute sm:left-0   h-[2px] w-[165px] bg-white"></div>
               </div>
             </div>
 

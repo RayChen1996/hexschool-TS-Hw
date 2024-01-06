@@ -3,7 +3,7 @@ import DecoLine from "../svg/DecoLine";
 export default function News() {
   return (
     <div className="flex  flex-row  p-10    bg-white gap-8 justify-center items-center mx-auto">
-      <div className=" text-black   flex flex-row  ">
+      <div className=" text-black   lg:flex flex-row  ">
         <div className=" w-64">
           <span className=" text-[#BF9D7D] font-[700] text-[48px] ">最新</span>
           <br />
@@ -47,7 +47,7 @@ function NewsCardItem() {
   return (
     <div>
       {data.map((item, index) => (
-        <div key={index} className="flex flex-row gap-2 m-5">
+        <div key={index} className="lg:flex flex-row gap-2 m-5">
           <div>
             <img
               className="w-[474px] h-auto rounded-[8px] bg-cover"

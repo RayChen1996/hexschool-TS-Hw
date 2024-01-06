@@ -3,7 +3,7 @@ import IgSvg from "../components/svg/ig";
 
 export const MyFooter = () => {
   return (
-    <div className="bg-[#140F0A] ">
+    <div className=" sm:mt-40  bg-[#140F0A] ">
       <footer className=" footer p-10 ">
         <aside>
           <svg
@@ -133,10 +133,11 @@ export const MyFooter = () => {
         </nav>
       </footer>
 
-      <div className=" relative   p-10 flex justify-around items-center">
+      <div className=" lg:relative   p-10 lg:flex justify-around items-center   ">
         <div className=" absolute left-10  ">
           806023 台灣高雄市新興區六角路123號
         </div>
+        <br />
         <div className=" absolute right-72">
           © 享樂酒店 2023 All Rights Reserved.
         </div>

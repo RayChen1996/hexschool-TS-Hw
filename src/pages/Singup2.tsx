@@ -31,8 +31,6 @@ function FormArea() {
             <Svg />
           </div>
 
-          <br />
-
           <h2 className="card-title text-[48px]"> 立即註冊</h2>
           <br />
           <div className=" form-contol">
@@ -155,8 +153,10 @@ function FormArea() {
             </div>
           </div>
           <div className="form-control flex flex-row gap-2">
-            <input type="checkbox" className=" checkbox       " />
-            <span>我已閱讀並同意本網站個資使用規範</span>
+            <input id="readme" type="checkbox" className=" checkbox       " />
+            <label htmlFor="readme">
+              <span>我已閱讀並同意本網站個資使用規範</span>
+            </label>
           </div>
           <br />
           <div className="card-actions flex-col">

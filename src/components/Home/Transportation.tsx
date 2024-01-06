@@ -6,8 +6,8 @@ export default function Transportation() {
   return (
     <div className=" bg-[#140F0A]  h-screen p-10 ">
       <div className="  ">
-        <div className=" absolute left-32  flex flex-row gap-5">
-          <div className=" ">
+        <div className=" absolute lg:left-32  flex flex-row gap-5">
+          <div>
             <span className=" text-[#BF9D7D] text-[48px]">交通</span>
             <br />
             <span className=" text-[#BF9D7D] text-[48px]">方式</span>
@@ -41,8 +41,8 @@ export default function Transportation() {
       <br />
       <br />
 
-      <div className="     flex flex-row text-left gap-3 justify-around">
-        <div className="">
+      <div className="    lg:flex flex-row text-left gap-3 justify-around">
+        <div className=" mt-3">
           <CarSvg />
           <header className=" text-[24px]">自行開車</header>
           <p>
@@ -53,7 +53,7 @@ export default function Transportation() {
           </p>
         </div>
 
-        <div>
+        <div className=" mt-10">
           <MRTSvg />
           <header className=" text-[24px]">高鐵/火車</header>
           <p>
@@ -65,7 +65,7 @@ export default function Transportation() {
           </p>
         </div>
 
-        <div>
+        <div className=" mt-3">
           <CarServiceSvg />
           <header className=" text-[24px]">禮賓車服務</header>
           <p>

@@ -5,4 +5,5 @@ import react from "@vitejs/plugin-react-swc";
 export default defineConfig({
   base: "/hexschool-TS-Hw/",
   plugins: [react()],
+  mode: "hash",
 });

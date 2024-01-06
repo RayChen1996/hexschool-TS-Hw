@@ -3,11 +3,20 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundColor: {
+        "btn-primary": "#BF9D7D",
+      },
       fontFamily: {
         serif: "'Noto Serif TC' , serif",
       },
       colors: {
+        primary: {
+          100: "#BF9D7D",
+        },
+
         // NOTE background
+        "btn-primary": "#BF9D7D",
+
         "background-dark": "#3D3D40", // 這裡使用自訂的顏色碼
         "background-50": "#F9F9FC",
         "background-100": "#F3F3F6",

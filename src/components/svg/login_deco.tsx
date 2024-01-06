@@ -3,7 +3,7 @@ type LineSvgProps = JSX.IntrinsicElements["svg"];
 function SvgComponent(props: LineSvgProps) {
   return (
     <svg
-      width="800"
+      width="480"
       height="187"
       viewBox="0 0 960 187"
       fill="none"

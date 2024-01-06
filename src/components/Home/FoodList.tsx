@@ -77,19 +77,19 @@ export default function FoodList() {
     },
   ];
   return (
-    <div className=" mb-3 relative  h-screen bg-[#F7F2EE]">
-      <div className=" absolute left-1">
+    <div className=" mb-3 relative   h-screen bg-[#F7F2EE]">
+      <div className=" sm:hidden lg:block absolute left-1">
         <DecoSvg />
       </div>
 
-      <div className=" absolute left-64 top-12 text-black ">
-        <div className=" flex flex-row gap-5">
+      <div className=" lg:absolute left-64 top-12 text-black ">
+        <div className=" sm:absolute sm:left-1  sm:top-20 lg:flex flex-row lg:gap-5">
           <div>
             <span className=" text-[#BF9D7D] text-[48px]">佳餚</span>
             <br />
             <span className=" text-[#BF9D7D] text-[48px]">美饌</span>
           </div>
-          <span className=" absolute left-32 top-16">
+          <span className=" lg:absolute lg:left-32 lg:top-16">
             <DecoLine />
           </span>
         </div>
@@ -104,7 +104,7 @@ export default function FoodList() {
       <br />
       <br />
       <br />
-      <div className=" ml-80">
+      <div className=" lg:ml-80">
         <Swiper
           modules={[Autoplay, Pagination, Navigation]}
           autoplay={{
@@ -113,9 +113,43 @@ export default function FoodList() {
           }}
           className="mySwiper"
           navigation={true}
-          spaceBetween={210}
-          slidesPerView={3}
           slidesPerGroup={1}
+          breakpoints={{
+            320: {
+              slidesPerView: 3,
+              spaceBetween: 150,
+            },
+            // when window width is >= 480px
+            480: {
+              slidesPerView: 3,
+              spaceBetween: 200,
+            },
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 50,
+            },
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 50,
+            },
+            1024: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            1280: {
+              slidesPerView: 3,
+              spaceBetween: 250,
+            },
+            1536: {
+              slidesPerView: 3,
+              spaceBetween: 200,
+            },
+            1920: {
+              slidesPerView: 3,
+              spaceBetween: 10,
+            },
+          }}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
           }}
@@ -145,14 +179,14 @@ function FoodCardItem({
 }: FoodCardItemProps) {
   return (
     <div
-      className=" p-5 m-5 relative h-[600px] w-[481px] rounded-[8px]     bg-base-100 shadow-xl   "
+      className=" h-96 md:h-96 lg:h-96    w-96       relative   rounded-[8px]  shadow-xl   "
       style={{
         backgroundImage: `url(${foodUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div className="  absolute bottom-0 left-0 card-body   w-full via-transparent backdrop-blur-md   ">
+      <div className=" h-36 md:h-36 lg:h-36    absolute bottom-0 left-0 card-body    via-transparent backdrop-blur-md   ">
         <h2 className="card-title flex justify-between">
           <span className=" text-[24px]">{foodName}</span>
           <span className="  flex-1"></span>
