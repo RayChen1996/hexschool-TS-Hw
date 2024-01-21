@@ -44,7 +44,7 @@ export default function Singup() {
             alt="image"
           />
         </div>
-        <div>
+        <div className=" lg:w-2/3 sm:w-full">
           <FormProvider {...useForm()}>
             <FormArea />
           </FormProvider>
@@ -97,7 +97,7 @@ function Step1() {
   console.log(errors);
   return (
     <>
-      <div className="card lg:relative   ">
+      <div className="card lg:relative    ">
         <form className="  card-body" onSubmit={handleSubmit(_submit)}>
           <div className=" lg:absolute lg:left-0  ">
             <Svg className=" w-40" />

@@ -100,10 +100,6 @@ export default function FoodList() {
       <br />
       <br />
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <div className=" lg:ml-80">
         <Swiper
           modules={[Autoplay, Pagination, Navigation]}
@@ -198,36 +194,3 @@ function FoodCardItem({
     </div>
   );
 }
-
-// function FoodCardItem({
-//   foodName,
-//   dateStr,
-//   TimeStr,
-//   foodDescription,
-//   foodUrl,
-// }: FoodCardItemProps) {
-//   const divStyle = {
-//     backgroundImage: `url(${foodUrl})`,
-//   };
-//   return (
-//     <div
-//       className="  relative h-[600px]   rounded-[8px]  border   bg-cover"
-//       // style={divStyle}
-//     >
-//       <img
-//         src={foodUrl}
-//         width={150}
-//         alt={foodName}
-//         className="absolute  bg-cover  h-auto mb-4"
-//       />
-//       {/* <div className=" p-2 absolute  backdrop-blur-md bg-gradient-to-r from-black via-transparent to-#140F0A bottom-2 text-white ">
-//         <div className=" text-white flex justify-between">
-//           <h2 className="text-xl font-bold">{foodName}</h2>
-//           <p className=" text-left text-white">Date: {dateStr}</p>
-//           <p className=" text-left text-white">Time: {TimeStr}</p>
-//         </div>
-//         <p className=" text-left text-white">{foodDescription}</p>
-//       </div> */}
-//     </div>
-//   );
-// }

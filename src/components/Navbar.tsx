@@ -17,7 +17,7 @@ export default function Nav() {
       <div className="flex justify-between items-center  w-full  ">
         <div className="  navbar  justify-around items-center   ">
           <div className=" flex-none p-5">
-            <a href="/">
+            <a href="/hexschool-TS-Hw">
               <svg
                 width="110"
                 height="40"
@@ -152,11 +152,11 @@ export default function Nav() {
         <div className=" hidden lg:flex     ">
           <ul className="  p-5 flex gap-5 w-80 items-center flex-row h-full   text-white">
             <li>
-              <a href="/hexschool-TS-Hw/RoomTypePicker">客房旅宿</a>
+              <a href="/hexschool-TS-Hw/#/RoomTypePicker">客房旅宿</a>
             </li>
             <li>
               {useTokenStore.getState().token ? (
-                <a className=" flex  gap-1" href="/hexschool-TS-Hw/Profile">
+                <a className=" flex  gap-1" href="/hexschool-TS-Hw/#/Profile">
                   <svg
                     width="24"
                     height="24"
@@ -179,10 +179,10 @@ export default function Nav() {
                       stroke-linejoin="round"
                     />
                   </svg>
-                  {useTokenStore.getState().username}
+                  {useTokenStore.getState().username ? "" : ""}
                 </a>
               ) : (
-                <a className=" flex  gap-1" href="/hexschool-TS-Hw/login">
+                <a className=" flex  gap-1" href="/hexschool-TS-Hw/#/login">
                   會員登入
                 </a>
               )}
@@ -190,7 +190,7 @@ export default function Nav() {
             <li>
               <a
                 className=" btn text-white  bg-primary-100"
-                href="/hexschool-TS-Hw/Profile"
+                href="/hexschool-TS-Hw/#/Profile"
               >
                 立即訂房
               </a>
@@ -211,10 +211,10 @@ export default function Nav() {
           <ul className="menu p-4 w-80 h-full   text-white">
             {/* Sidebar content here */}
             <li>
-              <a href="/hexschool-TS-Hw/RoomTypePicker">客房旅宿</a>
+              <a href="/hexschool-TS-Hw/#/RoomTypePicker">客房旅宿</a>
             </li>
             <li>
-              <a href="/hexschool-TS-Hw/Profile">Jessica</a>
+              <a href="/hexschool-TS-Hw/#/Profile">Jessica</a>
             </li>
             <li>
               <a>立即訂房</a>

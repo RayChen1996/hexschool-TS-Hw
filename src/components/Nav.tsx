@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import useTokenStore from "../zustand/useTokenStore";
+import { useNavigate } from "react-router-dom";
 
 export type PageType = "LOGIN" | "REGISTER" | "OTHER";
 export interface NavProps {
@@ -13,13 +14,14 @@ export default function Nav() {
   const toggleDrawer = () => {
     setDrawerOpen(!isDrawerOpen);
   };
+  const navigate = useNavigate();
 
   return (
     <div>
       <div className="bg-[#140F0A]  flex justify-between items-center  w-full  ">
         <div className=" sm:bg-transparent   lg:navbar  sm:flex sm:w-full  justify-around items-center   ">
           <div className=" flex-none p-5">
-            <a href="/">
+            <a href="/hexschool-TS-Hw">
               {isDrawerOpen ? (
                 <div className=" p-5"></div>
               ) : (
@@ -134,6 +136,7 @@ export default function Nav() {
           <div className="flex-none  ">
             <a>
               <button
+                type="button"
                 onClick={toggleDrawer}
                 className=" cursor-pointer lg:hidden btn btn-square btn-ghost"
               >
@@ -171,13 +174,40 @@ export default function Nav() {
         </div>
 
         <div className=" hidden lg:flex     ">
-          <ul className="  p-5 flex gap-5 w-80 items-center flex-row h-full   text-white">
+          <ul className=" menu menu-horizontal px-1 p-5 flex gap-5 w-80 items-center flex-row h-full   text-white">
             <li>
-              <a href="/hexschool-TS-Hw/RoomTypePicker">客房旅宿</a>
+              <a href="/hexschool-TS-Hw/#/RoomTypePicker">客房旅宿</a>
             </li>
-            <li>
+            {useTokenStore.getState().token ? (
+              <li>
+                <details>
+                  <summary>會員</summary>
+                  <ul className="p-2 w-36  bg-base-100 rounded-t-none">
+                    <li>
+                      <a href="/hexschool-TS-Hw/#/Profile">個人</a>
+                    </li>
+                    <li
+                      onClick={() => {
+                        useTokenStore.getState().cleanToken();
+                        setTimeout(() => {
+                          navigate("/");
+                        }, 0);
+                      }}
+                    >
+                      <a>登出</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            ) : (
+              <a className=" flex  gap-1" href="/hexschool-TS-Hw/#/login">
+                會員登入
+              </a>
+            )}
+
+            {/* <li>
               {useTokenStore.getState().token ? (
-                <a className=" flex  gap-1" href="/hexschool-TS-Hw/Profile">
+                <a className=" flex  gap-1" href="/hexschool-TS-Hw/#/Profile">
                   <svg
                     width="24"
                     height="24"
@@ -200,18 +230,19 @@ export default function Nav() {
                       stroke-linejoin="round"
                     />
                   </svg>
-                  {useTokenStore.getState().username}
+                  {useTokenStore.getState().username ? "" : ""}
                 </a>
               ) : (
-                <a className=" flex  gap-1" href="/hexschool-TS-Hw/login">
+                <a className=" flex  gap-1" href="/hexschool-TS-Hw/#/login">
                   會員登入
                 </a>
               )}
-            </li>
+            </li> */}
+
             <li>
               <a
                 className=" btn text-white  bg-primary-100"
-                href="/hexschool-TS-Hw/Profile"
+                href="/hexschool-TS-Hw/#/Profile"
               >
                 立即訂房
               </a>
@@ -232,10 +263,10 @@ export default function Nav() {
           <ul className=" mt-96 menu text-center flex gap-6  p-4 w-80 h-full   text-white">
             {/* Sidebar content here */}
             <li className=" border-none rounded-xl btn btn-[#140F0A] bg-[#140F0A]  text-center ">
-              <a href="/hexschool-TS-Hw/RoomTypePicker">客房旅宿</a>
+              <a href="/hexschool-TS-Hw/#/RoomTypePicker">客房旅宿</a>
             </li>
             <li className=" border-none rounded-xl btn btn-[#140F0A] bg-[#140F0A]  text-center ">
-              <a href="/hexschool-TS-Hw/Login">會員登入</a>
+              <a href="/hexschool-TS-Hw/#/Login">會員登入</a>
             </li>
             <li className=" text-center  btn btn-[#BF9D7D] bg-[#BF9D7D] text-[#FFFFFF] rounded-xl">
               <a>立即訂房</a>

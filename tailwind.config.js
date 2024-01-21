@@ -3,6 +3,13 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        sm: "576px", // Bootstrap small
+        md: "768px", // Bootstrap medium
+        lg: "992px", // Bootstrap large
+        xl: "1200px", // Bootstrap extra-large
+        xxl: "1400px",
+      },
       backgroundColor: {
         "btn-primary": "#BF9D7D",
       },

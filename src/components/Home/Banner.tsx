@@ -25,12 +25,12 @@ export default function Banner() {
             </p>
             <a
               className="  sm:flex  sm:ml-[-40px]  sm:mt-[35px] "
-              href="/hexschool-TS-Hw/RoomTypePicker"
+              href="/hexschool-TS-Hw/#/RoomTypePicker"
             >
               <button className=" lg:absolute gap-2 hover:bg-[#BF9D7D] left-[-35px] top-[410px] w-4/5 border-none  flex  flex-row  btn bg-[#ECECEC]">
                 <span className=" flex-1"></span>
                 <span className="  w-64 text-black flex items-center justify-end">
-                  <a href="/hexschool-TS-Hw/RoomTypePicker">
+                  <a href="/hexschool-TS-Hw/#/RoomTypePicker">
                     <span className="  ">立即訂房</span>
                   </a>
 
