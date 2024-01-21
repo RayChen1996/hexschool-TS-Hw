@@ -17,7 +17,7 @@ export default function Nav() {
       <div className="flex justify-between items-center  w-full  ">
         <div className="  navbar  justify-around items-center   ">
           <div className=" flex-none p-5">
-            <a href="/hexschool-TS-Hw">
+            <a href="/hexschool-TS-Hw/">
               <svg
                 width="110"
                 height="40"

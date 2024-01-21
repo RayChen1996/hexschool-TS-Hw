@@ -19,9 +19,9 @@ export default function Nav() {
   return (
     <div>
       <div className="bg-[#140F0A]  flex justify-between items-center  w-full  ">
-        <div className=" sm:bg-transparent   lg:navbar  sm:flex sm:w-full  justify-around items-center   ">
+        <div className="lg:w-2/3  sm:bg-transparent   lg:navbar  sm:flex sm:w-full  justify-around items-center   ">
           <div className=" flex-none p-5">
-            <a href="/hexschool-TS-Hw">
+            <a href="/hexschool-TS-Hw/">
               {isDrawerOpen ? (
                 <div className=" p-5"></div>
               ) : (
@@ -172,16 +172,41 @@ export default function Nav() {
             </a>
           </div>
         </div>
+        <div className=" lg:flex-1" />
 
-        <div className=" hidden lg:flex     ">
-          <ul className=" menu menu-horizontal px-1 p-5 flex gap-5 w-80 items-center flex-row h-full   text-white">
+        <div className=" hidden lg:flex   justify-end  lg:w-1/4  ">
+          <ul className=" w-full lg:z-50 menu menu-horizontal px-1 p-5 flex gap-5 items-center flex-row h-full   text-white">
             <li>
               <a href="/hexschool-TS-Hw/#/RoomTypePicker">客房旅宿</a>
             </li>
             {useTokenStore.getState().token ? (
               <li>
                 <details>
-                  <summary>會員</summary>
+                  <summary className=" lg:z-999 w-32">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2Z"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M4.271 18.346C4.271 18.346 6.5 15.5 12 15.5C17.5 15.5 19.73 18.346 19.73 18.346M12 12C12.7956 12 13.5587 11.6839 14.1213 11.1213C14.6839 10.5587 15 9.79565 15 9C15 8.20435 14.6839 7.44129 14.1213 6.87868C13.5587 6.31607 12.7956 6 12 6C11.2043 6 10.4413 6.31607 9.87868 6.87868C9.31607 7.44129 9 8.20435 9 9C9 9.79565 9.31607 10.5587 9.87868 11.1213C10.4413 11.6839 11.2043 12 12 12V12Z"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    會員
+                  </summary>
                   <ul className="p-2 w-36  bg-base-100 rounded-t-none">
                     <li>
                       <a href="/hexschool-TS-Hw/#/Profile">個人</a>
@@ -205,43 +230,9 @@ export default function Nav() {
               </a>
             )}
 
-            {/* <li>
-              {useTokenStore.getState().token ? (
-                <a className=" flex  gap-1" href="/hexschool-TS-Hw/#/Profile">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2Z"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M4.26953 18.346C4.26953 18.346 6.49853 15.5 11.9985 15.5C17.4985 15.5 19.7285 18.346 19.7285 18.346M11.9985 12C12.7942 12 13.5572 11.6839 14.1199 11.1213C14.6825 10.5587 14.9985 9.79565 14.9985 9C14.9985 8.20435 14.6825 7.44129 14.1199 6.87868C13.5572 6.31607 12.7942 6 11.9985 6C11.2029 6 10.4398 6.31607 9.87721 6.87868C9.3146 7.44129 8.99853 8.20435 8.99853 9C8.99853 9.79565 9.3146 10.5587 9.87721 11.1213C10.4398 11.6839 11.2029 12 11.9985 12V12Z"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  {useTokenStore.getState().username ? "" : ""}
-                </a>
-              ) : (
-                <a className=" flex  gap-1" href="/hexschool-TS-Hw/#/login">
-                  會員登入
-                </a>
-              )}
-            </li> */}
-
             <li>
               <a
-                className=" btn text-white  bg-primary-100"
+                className="    text-white  bg-primary-100"
                 href="/hexschool-TS-Hw/#/Profile"
               >
                 立即訂房
@@ -249,7 +240,7 @@ export default function Nav() {
             </li>
           </ul>
         </div>
-        <div className=" flex-1" />
+        {/* <div className=" flex-1" /> */}
 
         {/* ToolButtons for larger screens */}
         <div className=" hidden lg:flex justify-center items-center "></div>

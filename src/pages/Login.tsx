@@ -110,8 +110,11 @@ function FormArea() {
           </div>
         </div>
         <div className="form-control flex flex-row gap-2">
-          <input type="checkbox" className=" checkbox       " />
-          <span>記住帳號</span>
+          <input id="cbx" type="checkbox" className=" checkbox " />
+          <span>
+            {" "}
+            <label htmlFor="cbx">記住帳號</label>{" "}
+          </span>
           <span className=" flex-1"></span>
           <span>忘記密碼？</span>
         </div>
