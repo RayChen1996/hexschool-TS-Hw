@@ -264,7 +264,7 @@ function Step2() {
     console.log(regForm);
 
     fetch(
-      `https://hexschool-video-course-api.onrender.com/api/v1/user/signup`,
+      `https://raychen.co.uk/hotel/api/v1/user/signup`,
       {
         method: "POST",
         headers: {
