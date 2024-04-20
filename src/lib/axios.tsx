@@ -11,7 +11,7 @@ const AxiosContext = createContext<AxiosInstance | undefined>(undefined);
 
 export const AxiosProvider: React.FC<AxiosProviderProps> = ({ children }) => {
   const axiosInstance = axios.create({
-    baseURL: "http://hexschool-video-course-api.onrender.com/",
+    baseURL: "https://raychen.co.uk/hotel",
 
     timeout: 1000,
     headers: {
